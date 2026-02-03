@@ -179,21 +179,21 @@ function backend_move_snake() {
   }
     
   if ((head_history[0][0] > 16 || head_history[0][0] < 0 || head_history[0][1] > 14 || head_history[0][1] < 0)) { // If the snake runs into a wall
-    status = 'You concussed yourself against a wall! You lose.\nPress UP, RIGHT, or DOWN to play again.';
+    status = 'You ran into a wall! You lose.\nPress UP, RIGHT, or DOWN\n to play again.';
     frameRate(0);
     setTimeout(function(){setup()}, 1000); // Reset game after one second
   }
 
   for (let n = 1; n < head_history.length; n++) { // If the snake runs into itself (excludes the partial-square tail to ensure losses all make sense)
     if (head_history[0][0] == head_history[n][0] && head_history[0][1] == head_history [n][1]) {
-      status = 'You bit yourself! You lose.\nPress UP, RIGHT, or DOWN to play again.';
+      status = 'You bit yourself! You lose.\nPress UP, RIGHT, or DOWN\n to play again.';
       frameRate(0);
       setTimeout(function(){setup()}, 1000);
     }
   }
 
   if (snake_length >= 255) { // If the player reches the maximum length and fills the board
-    status = 'You ate all the apples! You win!\nPress UP, RIGHT, or DOWN to play again.';
+    status = 'You ate all the apples! You win!\nPress UP, RIGHT, or DOWN\n to play again.';
     frameRate(0);
     setTimeout(function(){setup()}, 1000);
   }
