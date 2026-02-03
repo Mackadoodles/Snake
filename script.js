@@ -8,7 +8,7 @@ let tail_direction;
 let previous_keycode;
 let game_started;
 let score;
-let status = "Press UP, RIGHT, or DOWN\n to start."; // Communications to player
+let status = "Press UP, RIGHT, or DOWN\n to start.\nDESIGNED FOR PC"; // Communications to player
 
 let font;
 
